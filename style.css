@@ -144,10 +144,9 @@ body.fixedNav nav {
   -webkit-transition: padding 0.6s linear;
   -moz-transition: padding 0.6s linear;
   -o-transition: padding 0.6s linear;
-  boxShadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -webkit-boxShadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -moz-boxShadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -o-boxShadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 }
 body.fixedNav .firstHolder, body.fixedNav .secondHolder, body.fixedNav .contactHolder {
   position: fixed;
@@ -365,30 +364,27 @@ body.fixedNav .firstHolder, body.fixedNav .secondHolder, body.fixedNav .contactH
   width: 100%;
   outline: 0;
   border: 0;
-  boxShadow: 0 1px 0 0 #e5e5e5;
-  -webkit-boxShadow: 0 1px 0 0 #e5e5e5;
-  -moz-boxShadow: 0 1px 0 0 #e5e5e5;
-  -o-boxShadow: 0 1px 0 0 #e5e5e5;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+  -webkit-box-shadow: 0 1px 0 0 #e5e5e5;
+  -moz-box-shadow: 0 1px 0 0 #e5e5e5;
   transition: box-shadow 150ms ease-out;
   -webkit-transition: box-shadow 150ms ease-out;
   -moz-transition: box-shadow 150ms ease-out;
   -o-transition: box-shadow 150ms ease-out;
 }
 .form-group input:focus {
-  boxShadow: 0 2px 0 0 #E58B80;
-  -webkit-boxShadow: 0 2px 0 0 #E58B80;
-  -moz-boxShadow: 0 2px 0 0 #E58B80;
-  -o-boxShadow: 0 2px 0 0 #E58B80;
+  box-shadow: 0 2px 0 0 #E58B80;
+  -webkit-box-shadow: 0 2px 0 0 #E58B80;
+  -moz-box-shadow: 0 2px 0 0 #E58B80;
 }
 
 textarea {
   color: #999999;
   border: 1px solid #e5e5e5;
   outline: 0;
-  boxShadow: 0 1px 0 0 #e5e5e5;
-  -webkit-boxShadow: 0 1px 0 0 #e5e5e5;
-  -moz-boxShadow: 0 1px 0 0 #e5e5e5;
-  -o-boxShadow: 0 1px 0 0 #e5e5e5;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+  -webkit-box-shadow: 0 1px 0 0 #e5e5e5;
+  -moz-box-shadow: 0 1px 0 0 #e5e5e5;
   transition: box-shadow 150ms ease-out;
   -webkit-transition: box-shadow 150ms ease-out;
   -moz-transition: box-shadow 150ms ease-out;
@@ -416,10 +412,9 @@ textarea:focus {
 }
 
 .filled {
-  boxShadow: 0 2px 0 0 lightgreen !important;
-  -webkit-boxShadow: 0 2px 0 0 lightgreen !important;
-  -moz-boxShadow: 0 2px 0 0 lightgreen !important;
-  -o-boxShadow: 0 2px 0 0 lightgreen !important;
+  box-shadow: 0 2px 0 0 lightgreen !important;
+  -webkit-box-shadow: 0 2px 0 0 lightgreen !important;
+  -moz-box-shadow: 0 2px 0 0 lightgreen !important;
 }
 
 .filled-textarea {
