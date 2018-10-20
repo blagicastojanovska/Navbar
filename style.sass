@@ -1,0 +1,584 @@
+// variables
+
+$c-black:black
+$c-goldenrose: #E58B80
+$c-white: white
+$f-family-regular: NeutriefStudio-Regular
+$f-family-semi: NeutriefStudio-SemiBold
+
+// extensions
+
+%flex
+  display: flex
+  justify-content: center
+  align-items: center
+
+%flex-around
+  display: flex
+  justify-content: space-around
+
+// mixings
+
+=transform($property)
+  transform: $property 
+  -webkit-transform: $property
+  -moz-transform: $property
+  -o-transform: $property
+
+=transition($property)
+  transition: $property 
+  -webkit-transition: $property
+  -moz-transition: $property
+  -o-transition: $property
+
+=boxShadow($property)
+  boxShadow: $property 
+  -webkit-boxShadow: $property
+  -moz-boxShadow: $property
+  -o-boxShadow: $property
+
+@font-face
+  font-family: $f-family-semi
+  src: url("Materials/Font/NeutrifStudio TTF official STEETS/NeutrifStudio-SemiBold.ttf")
+
+@font-face
+  font-family: $f-family-regular
+  src: url("Materials/Font/NeutrifStudio TTF official STEETS/NeutrifStudio-Regular.ttf")
+
+body
+  margin: 0
+  padding: 0
+  background-color: #F0F0F0
+  height: 200vh
+
+nav
+  background-color: $c-white
+  width: 100%
+  padding-top: 40px
+  padding-bottom: 30px
+  +transition(padding 0.6s linear)
+  &::after
+    content: ""
+    display: table
+    clear: both
+
+.navbar-header
+  width: 10%
+  float: left
+  padding-left: 150px
+
+.navbar-brand img
+  width: 100%
+
+.navbar-body
+  float: right
+  width: 78%
+
+.navbar-list
+  list-style-type: none
+  margin: 0
+  i
+    position: relative
+    top: 2px
+  li
+    display: inline-block
+    margin-right: 28px
+    font-family: $f-family-semi
+    font-size: 18px
+    cursor: pointer
+    &:hover
+      color: $c-goldenrose
+    &:nth-child(1)
+      padding-left: 35px
+    a
+      text-decoration: none
+      color: $c-black
+      &:focus, &:hover
+        color: $c-goldenrose
+
+#btn
+  background-color: $c-black
+  color: $c-white
+  padding: 12px 27px
+  border-radius: 120px
+  font-size: 15px
+  &:hover
+    background-color: $c-goldenrose
+    color: $c-white
+
+.relative-ico
+  position: relative
+  top: 5px
+  &:hover .magnifier-ico
+    fill: #E58BB0
+
+.firstHolder
+  padding: 16px 0
+  background-color: $c-goldenrose
+  @extend %flex
+  width: 100%
+  top: 99px
+
+.firstHolder-inner
+  width: 86%
+  @extend %flex-around
+
+.lista
+  float: left
+  width: 27%
+  color: $c-white
+  list-style-type: none
+  line-height: 45px
+  li
+    font-family: $f-family-regular
+
+.arrow-ico
+  width: 10px
+  fill: #ffffff
+
+.pinkColor
+  color: $c-goldenrose !important
+
+body.fixedNav
+  nav
+    position: fixed
+    top: 0
+    padding-top: 20px
+    padding-bottom: 15px
+    +transition(padding 0.6s linear)
+    +boxShadow(0 3px 0 rgba(0, 0, 0, 0.1))
+
+  .firstHolder, .secondHolder, .contactHolder
+    position: fixed
+    top: 65.4219px
+    +transition(top 0.6s linear)
+
+.st0
+  fill: #010202
+
+.secondHolder
+  @extend %flex
+  width: 100%
+  top: 99px
+  padding: 40px 0
+  background-color: $c-goldenrose
+
+.secondHolder-inner
+  width: 80%
+  height: 55%
+  @extend %flex-around
+
+
+.secondHolder-content
+  width: 25%
+  float: left
+  text-align: center
+  border: 1px solid $c-white
+  padding: 20px
+  color: $c-white
+  &:hover
+    +transform(scale(1.1))
+    +transition(all .2s linear)
+    cursor: pointer
+    background-color: $c-white
+    color: $c-black
+    .secondHolder-img img
+      +transform(rotateY(180deg))
+      +transition(all .5s linear)
+     
+  h2
+    font-size: 16px
+    text-transform: uppercase
+    font-family: $f-family-semi
+  p
+    font-size: 14px
+    font-family: $f-family-regular
+
+.secondHolder-img img
+  width: 80px
+
+.contactHolder
+  @extend %flex
+  width: 100%
+  top: 99px
+  padding: 30px 0
+  height: 70vh
+  background-color: $c-white
+  font-family: $f-family-regular
+
+.contactHolder-inner
+  width: 70%
+  height: 100%
+  @extend %flex-around
+
+
+.constactHolder-content
+  width: 49%
+  float: left
+
+.leftContent
+  height: 100%
+  @extend %flex-around
+  flex-direction: column
+
+.support
+  height: 25%
+  border-radius: 10px
+  padding: 10px 20px
+  background-color: $c-black
+  margin-bottom: 10px
+  @extend %flex
+
+.getInTouch
+  height: 65%
+  border-radius: 10px
+  padding: 20px
+  @extend %flex-around
+  flex-direction: column
+
+.support-icon
+  width: 20%
+  float: left
+  color: $c-goldenrose
+
+.support-text
+  width: 70%
+  float: left
+  color: $c-white
+  h4
+    margin-top: -10px
+  a
+    background-color: $c-goldenrose
+    padding: 13px 25px
+    color: $c-white
+    text-decoration: none
+    border-radius: 5px
+    font-size: 11px
+
+.form a
+  background-color: $c-goldenrose
+  padding: 13px 25px
+  color: $c-white
+  text-decoration: none
+  border-radius: 5px
+  font-size: 11px
+
+.support-text a:hover, .form a:hover
+  color: $c-black
+
+.getInTouch-inner
+  height: 30%
+  display: flex
+  justify-content: center
+
+.getInTouch-icon
+  width: 20%
+  float: left
+  padding-top: 22px
+  padding-left: 10px
+  color: $c-goldenrose
+
+.getInTouch-text
+  width: 70%
+  float: left
+  h3
+    font-size: 15px
+  p
+    font-size: 13px
+    color: grey
+
+.formHolder
+  background-color: $c-white
+  height: 100%
+  border-radius: 10px
+
+.form
+  height: 100%
+  padding: 10px 30px
+
+.form-group
+  position: relative
+  label
+    position: absolute
+    left: 0
+    top: 27px
+    color: #999
+    background-color: #fff
+    z-index: 10
+    +transition(transform 150ms ease-out)
+    +transition(font-size 150ms ease-out)
+
+.focused label
+  +transform(translateY(-125%))
+  font-size: .75em
+
+.form-group input
+  position: relative
+  padding: 12px 0px 5px 0
+  width: 100%
+  outline: 0
+  border: 0
+  +boxShadow(0 1px 0 0 #e5e5e5)
+  +transition(box-shadow 150ms ease-out)
+  &:focus
+    +boxShadow(0 2px 0 0 $c-goldenrose)
+
+textarea
+  color: #999999
+  border: 1px solid #e5e5e5
+  outline: 0
+  +boxShadow(0 1px 0 0 #e5e5e5)
+  +transition(box-shadow 150ms ease-out)
+  margin-top: 5px
+  &:focus
+    border: 2px solid $c-goldenrose
+
+.form-group-textarea
+  margin-top: 22px
+  margin-bottom: 20px
+  label
+    color: #999
+
+.messageText h3
+  margin-top: 3px
+  padding-left: 30px
+  margin-bottom: -9px
+  color: #162a33
+  font-size: 27px
+
+.filled
+  +boxShadow(0 2px 0 0 lightgreen !important)
+
+.filled-textarea
+  border: 2px solid lightgreen
+
+/*HAMBURGER MENU*/
+
+.overlay
+  height: 0%
+  width: 100%
+  position: fixed
+  top: 56px
+  left: 0
+  background-color: $c-white
+  overflow-y: hidden
+  z-index:100000
+
+.overlay-content
+  position: relative
+  top: 5%
+  width: 100%
+  text-align: center
+  margin-top: 30px
+  z-index: 1111111
+
+.overlay-menu
+  line-height: 2.5
+  list-style-type: none
+  padding-left: 0
+  li
+    margin-bottom: 10px
+
+.overlay
+  a, li
+    text-decoration: none
+    font-size: 22px
+    +transition(0.3s)
+    color: $c-black
+    font-family: $f-family-regular
+  .closebtn
+    position: absolute
+    top: -10px
+    right: 20px
+    font-size: 60px
+
+.navBrand-media
+  padding: 8px
+  position: absolute
+  top: 18px
+  left: 24px
+  font-size: 22px
+  text-transform: capitalize
+  background-color: $c-white
+  color: $c-black !important
+
+.media-overlay-button
+  padding: 15px 145px !important
+
+.media-overlay-button2
+  padding: 15px 118px !important
+
+.hamburger
+  font-size: 30px
+  cursor: pointer
+  display: none
+  margin-left: 242px
+  margin-top: -40px
+  color: $c-black
+
+#myNav .open
+  display: none
+  height: 0%
+  +transition(0s)
+
+@media screen and (max-width: 1024px)
+  .navbar-header
+    width: 11%
+    padding-left: 21px
+    padding-top: 2px
+  .navbar-body
+    width: 100%
+    float: none
+  .navbar-list li
+    &:nth-child(1)
+      padding-left: 28px
+      margin-right: 10px
+    margin-right: 12px
+  .firstHolder-inner
+    width: 100%
+    .lista
+      width: 33%
+  .form textarea
+    width: 100%
+
+@media screen and (max-width: 768px)
+  .navbar-list
+    display: none
+  .hamburger
+    display: block
+    margin-left: 680px
+  .navbar-brand svg
+    width: 130px
+  .navbar-header
+    padding-left: 30px
+  nav
+    padding-top: 25px
+    padding-bottom: 21px
+    z-index: 1000
+  .secondHolder-inner
+    width: 90%
+  .firstHolder-inner
+    flex-direction: column
+    width: 86%
+    .lista
+      width: 100%
+      padding-left: 0
+  body.fixedNav
+    .firstHolder, .secondHolder, .contactHolder
+      position: relative
+      top: 0
+  .firstHolder, .secondHolder, .contactHolder
+    top: 0
+  .form textarea
+    width: 100%
+  .formHolder .messageText h3
+    font-size: 24px
+  .contactHolder-inner
+    width: 90%
+  .constactHolder-content
+    width: 100%
+  .open
+    display: block
+    height: 100%
+    +transition(1s)
+
+  .mobile-ico
+    position: relative
+    top: 2px
+
+@media screen and (max-width: 425px)
+  .navbar-list
+    display: none
+  .hamburger
+    display: block
+    margin-left: 338px
+  .navbar-brand svg
+    width: 130px
+  .navbar-header
+    padding-left: 30px
+  nav
+    padding-top: 25px
+    padding-bottom: 21px
+    z-index: 1000
+  body.fixedNav
+    .firstHolder, .secondHolder, .contactHolder
+      position: relative
+      top: 0
+  .firstHolder, .secondHolder, .contactHolder
+    top: 0
+  .secondHolder-inner
+    flex-direction: column
+    width: 80%
+  .secondHolder-content
+    width: 100%
+    margin-bottom: 40px
+    padding: 10px 0
+  .firstHolder-inner
+    width: 80%
+    .lista
+      width: 100%
+      padding-left: 0
+  .contactHolder
+    height: 150vh
+  .contactHolder-inner
+    width: 85%
+    flex-direction: column
+  .constactHolder-content
+    width: 100%
+  .leftContent
+    border-bottom: 1px solid lightgrey
+    margin-bottom: 35px
+  .open
+    display: block
+    height: 100%
+    +transition(1s)
+   
+  .mobile-ico
+    position: relative
+    top: 2px
+
+@media screen and (max-width: 375px)
+  .navbar-list
+    display: none
+  .hamburger
+    display: block
+    margin-left: 290px
+  .navbar-brand svg
+    width: 130px
+  .navbar-header
+    padding-left: 30px
+  nav
+    padding-top: 25px
+    padding-bottom: 21px
+  .open
+    display: block
+    height: 100%
+    +transition(1s)
+   
+  .mobile-ico
+    position: relative
+    top: 2px
+
+@media screen and (max-width: 320px)
+  .navbar-list
+    display: none
+  .hamburger
+    display: block
+    margin-left: 242px
+  .navbar-brand svg
+    width: 130px
+  .navbar-header
+    padding-left: 30px
+  nav
+    padding-top: 25px
+    padding-bottom: 21px
+  .firstHolder-inner .lista li
+    font-size: 13px
+  .open
+    display: block
+    height: 100%
+    +transition(1s)
+   
+  .mobile-ico
+    position: relative
+    top: 2px
